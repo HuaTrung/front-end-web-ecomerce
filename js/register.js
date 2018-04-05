@@ -12,10 +12,16 @@ var config = {
   const auth = firebase.auth();
   console.log("register")
   var btnSignUp = document.querySelector("#btnSignUp")
+  var email = document.querySelector("#txtEmail")
+  var pass = document.querySelector("#txtPassword")
+  var rPass = document.querySelector("#txtRPassword")
   if (btnSignUp) {
     console.log("btnSignUp not null")
     btnSignUp.addEventListener("click", ()=>{
-        console.log("adasdasdasdasd")
+        if (email.value === ""){
+            console.log("text empty")
+            alert("Please fill in Email")
+        }
     })
   }
   else{

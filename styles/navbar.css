@@ -1,6 +1,13 @@
 
-   .headerwrapper  li a{text-decoration:none; color:#a1c057;}
-   .headerwrapper  li:hover{background:#a1c057; border-radius:5px; color:#FFF; transition:all 0.5s;
+   .headerwrapper   a{text-decoration:none; color:#a1c057;}
+   .headerwrapper  :hover{background:#a1c057; border-radius:5px; color:#FFF; transition:all 0.5s;
    animation:rubberBand 0.9s; -webkit-animation:rubberBand 0.9s;}
-   .headerwrapper  li:hover a{color:white;}
+   .headerwrapper  :hover a{color:white; }
 
+   #main_nav_container.navbar-shrink {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  #main_nav_container.navbar-shrink .logo_container {
+    font-size: 1.5em;
+  }

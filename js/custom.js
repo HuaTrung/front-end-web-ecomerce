@@ -68,10 +68,14 @@ jQuery(document).ready(function($)
 			if($(window).scrollTop() > 100)
 			{
 				header.css({'top':"0"});
+				$("#main_nav_container").removeClass("navbar-shrink");
+				console.log("remove");
 			}
 			else
 			{
 				header.css({'top':"0"});
+				$("#main_nav_container").removeClass("navbar-shrink");
+				console.log("remove");
 			}
 		}
 		else
@@ -79,10 +83,14 @@ jQuery(document).ready(function($)
 			if($(window).scrollTop() > 100)
 			{
 				header.css({'top':"-50px"});
+				$("#main_nav_container").addClass("navbar-shrink");
+				console.log("add");
 			}
 			else
 			{
 				header.css({'top':"0"});
+				$("#main_nav_container").removeClass("navbar-shrink");
+				console.log("remove");
 			}
 		}
 		if(window.innerWidth > 991 && menuActive)

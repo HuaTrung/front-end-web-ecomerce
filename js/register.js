@@ -19,9 +19,30 @@ var config = {
     console.log("btnSignUp not null")
     btnSignUp.addEventListener("click", ()=>{
         if (email.value === ""){
-            console.log("text empty")
+            console.log("email empty")
             alert("Please fill in Email")
+            return
         }
+        if (pass.value === ""){
+            console.log("pass empty")
+            alert("Please fill in Password")
+            return
+        }
+        if (rPass.value === ""){
+            console.log("rpass empty")
+            alert("Please retype Password")
+            return
+        }
+        else{
+            if (pass.value !== rPass.value){
+                alert("asdadasd")
+                return
+            }
+        }
+        console.log()
+        auth.createUserWithEmailAndPassword(email.value, pass.value).then(result=>{
+            console.log("asdasdasd")
+        }).catch(err=>console.log("Sign up error: " + err))
     })
   }
   else{

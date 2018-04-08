@@ -1,20 +1,4 @@
 
-@font-face {
-    font-family: 'Oxygen-Bold';
-    src:url(../fonts/Oxygen-Bold.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Ubuntu-Regular';
-    src:url(../fonts/Ubuntu-Regular.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Ubuntu-Bold';
-    src:url(../fonts/Ubuntu-Bold.ttf) format('truetype');
-}
-@font-face{
-	font-family:'Oxygen-Regular';
-	src:url(../fonts/Oxygen-Regular.ttf) format('truetype');
-}
 
 /*--content--*/
 .content-top {

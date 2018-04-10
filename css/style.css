@@ -763,6 +763,11 @@ nav.nav-sidebar {
 	border-top: 1px solid #EDEDED;
 	border-left: 1px solid #EDEDED;
 }
+#imglogo_container{
+    width:60px;
+    height:60px;
+    border:0;
+}
 .one{
 	float:right;
     width: 70%;

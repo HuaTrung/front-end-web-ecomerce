@@ -16,21 +16,24 @@ function getGet() {
     console.log("single.js")
     var para = location.search.substring(1).split("&")
     var temp = para[0].split("=")
-    l = unescape(temp[1])
-    console.log("l value: " + l)
-    var temp = ""
-    firestore.collection("DanhMuc").doc(l).get().then((data)=>{
-        if(data.exists){
-            console.log(data.data().TenSanPham)
-            document.getElementById("h3_NameProduct").innerHTML = data.data().TenSanPham
-        }
-    })
-    
-    if (l === "ThitBoPhap"){
-        document.getElementById("HinhMinhHoa").src = "pictures/ThitNgonQuocTe/ThitBoNhapKhau/pc1.jpg"
+   // console.log(temp)
+    const id_product = unescape(temp[1])
+    console.log("l value: " + id_product)
+  //  var temp = ""
+
+    var load_product = function() {
+        firestore.collection("SanPham").doc(id_product).get().then((data)=>{
+            if(data.exists){
+                console.log(data.data().MoTa)
+                $("#mota-sp").html(data.data().MoTa)                  
+                $("#product-price").html(data.data().GiaBan)    
+                $("#product-name").html(data.data().Ten)     
+                $("#product-image").attr("src",data.data().HinhAnh)           
+            }
+        })
     }
-    
-    
+
+    load_product();
 }
 
 getGet()

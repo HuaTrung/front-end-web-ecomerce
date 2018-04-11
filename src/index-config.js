@@ -37,6 +37,11 @@ $(document).ready(function(){
         $(".data-pass-2").each(function(j){
             $(this).attr("href","single.html?id="+array_8_products[j].id)
         });
+
+        $(".show-image").each(function(j){
+            $(this).attr("href",array_8_products[j].urlImage)
+            $(this).attr("target","_blank")
+        });
     }
   
     

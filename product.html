@@ -558,7 +558,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
-
 					<div class="col-md-4 item-grid1 simpleCart_shelfItem">
 						<div class=" mid-pop">
 							<div class="pro-img">
@@ -684,10 +683,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 									<div class="clearfix"></div>
 								</div>
-
 							</div>
 						</div>
 					</div>
+					<nav class="pagination-container">
+						<div class="pagination">
+							<a class="pagination-newer" href="#">PREV</a>
+							<span class="pagination-inner">
+								<a href="#">1</a>
+								<a class="pagination-active" href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+							</span>
+							<a class="pagination-older" href="#">NEXT</a>
+						</div>
+					</nav>
 					<div class="clearfix"></div>
 				</div>
 			</div>
@@ -890,24 +902,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<!--//products-->
 		<!--brand-->
-	<div class="container">
-		<div class="brand">
-			<div class="col-md-3 brand-grid">
-				<img src="pictures/brands/ic.jpg" class="img-responsive" alt="">
+		<div class="container">
+			<div class="brand">
+				<div class="col-md-3 brand-grid">
+					<img src="pictures/brands/ic.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="pictures/brands/ic1.png" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="pictures/brands/ic2.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="col-md-3 brand-grid">
+					<img src="pictures/brands/ic3.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="clearfix"></div>
 			</div>
-			<div class="col-md-3 brand-grid">
-				<img src="pictures/brands/ic1.png" class="img-responsive" alt="">
-			</div>
-			<div class="col-md-3 brand-grid">
-				<img src="pictures/brands/ic2.jpg" class="img-responsive" alt="">
-			</div>
-			<div class="col-md-3 brand-grid">
-				<img src="pictures/brands/ic3.jpg" class="img-responsive" alt="">
-			</div>
-			<div class="clearfix"></div>
 		</div>
-	</div>
-	<!--//brand-->
+		<!--//brand-->
 
 
 	</div>
@@ -1066,6 +1078,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$(function () {
 			$('a.picture').Chocolat();
 		});
+		$('.pagination-inner a').on('click', function () {
+			$(this).siblings().removeClass('pagination-active');
+			$(this).addClass('pagination-active');
+		})
 	</script>
 </body>
 

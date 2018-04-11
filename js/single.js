@@ -1,52 +1,36 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyAAGopUQDY2GE0T1f_c0dYHrlaywDLqayM",
+    authDomain: "my-mart-10d9a.firebaseapp.com",
+    databaseURL: "https://my-mart-10d9a.firebaseio.com",
+    projectId: "my-mart-10d9a",
+    storageBucket: "my-mart-10d9a.appspot.com",
+    messagingSenderId: "1012373943902"
+};
+firebase.initializeApp(config);
+//=================================
+const firestore = firebase.firestore();
 
+function getGet() {
 
-
-console.log("single.js")
-var para = location.search.substring(1).split("&")
-var temp = para[0].split("=")
-l = unescape(temp[1])
-console.log("l value: " + l)
-// $(document).ready(function(){
-//     $("#passForm").submit(function() {
-//         console.log("inside producrForm")
-//         // get all the inputs into an array.
-//         var $inputs = $('#passForm :input');
+    console.log("single.js")
+    var para = location.search.substring(1).split("&")
+    var temp = para[0].split("=")
+    l = unescape(temp[1])
+    console.log("l value: " + l)
+    var temp = ""
+    firestore.collection("DanhMuc").doc(l).get().then((data)=>{
+        if(data.exists){
+            console.log(data.data().TenSanPham)
+            document.getElementById("h3_NameProduct").innerHTML = data.data().TenSanPham
+        }
+    })
     
-//         // not sure if you wanted this, but I thought I'd add it.
-//         // get an associative array of just the values.
-//         var values = {};
-//         $inputs.each(function() {
-//             values[this.name] = $(this).val();
-//             console.log("productForm: " + values[this.name])
-//         });
+    if (l === "ThitBoPhap"){
+        document.getElementById("HinhMinhHoa").src = "pictures/ThitNgonQuocTe/ThitBoNhapKhau/pc1.jpg"
+    }
     
-//     });
-// })
-
-// function test(){
-//     console.log("inside test")
-//     var para = location.search.substring(1).split("&")
-//     console.log("para: " + para)
-//     var temp = para[0].split("=")
-//     var l = unescape(temp[1])
     
-//     console.log(l)
-// }
-// test()
+}
 
-// function getParams(){
-//     console.log("inside getParams")
-//     var idx = document.URL.indexOf('?');
-//     var params = new Array();
-//     if (idx != -1) {
-//     var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
-//     for (var i=0; i<pairs.length; i++){
-//     nameVal = pairs[i].split('=');
-//     params[nameVal[0]] = nameVal[1];
-//     }
-//     }
-//     return params;
-//     }
-//     params = getParams();
-//     firstname = unescape(params["txtPass"]);
-//     console.log("txtPass = " + firstname + "<br>");
+getGet()

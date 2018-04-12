@@ -24,8 +24,9 @@
     console.log("inside if statement")
     btnSend.addEventListener("click", ()=>{
         console.log("before btnSend")
+
         firestore.collection("YKienKhachHang").doc(txtEmail.value).collection(txtSubject.value).add({
-            Message: txtMessage.value,
+            Message: txtMessage.value+" ",
             Name: txtName.value
         }).then(()=>alert("send successfully")).catch(err=>console.log("err: ") + err)  
         console.log("after btnSend")

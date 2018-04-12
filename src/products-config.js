@@ -151,12 +151,14 @@ $(document).ready(function () {
                 else {
                     if ($('#so3').hasClass('pagination-active')) {
                         $('#so3').removeClass('pagination-active')
-                        $('#so2').addClass('pagination-active');
+                        $('#so2').addClass('pagination-active')
+                        reloadProduct(6)
                     }
                     else {
                         if ($('#so2').hasClass('pagination-active')) {
                             $('#so2').removeClass('pagination-active')
-                            $('#so1').addClass('pagination-active');
+                            $('#so1').addClass('pagination-active')
+                            reloadProduct(0)
                         }
                     }
                 }
@@ -166,7 +168,8 @@ $(document).ready(function () {
     $('.pagination-older').on('click', function () {
         if ($('#so1').hasClass('pagination-active')) {
             $('#so1').removeClass('pagination-active')
-            $('#so2').addClass('pagination-active');
+            $('#so2').addClass('pagination-active')
+            reloadProduct(6)
         }
         else {
             if ($('#so2').hasClass('pagination-active')) {

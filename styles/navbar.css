@@ -11,3 +11,11 @@
   #main_nav_container.navbar-shrink .logo_container {
     font-size: 1.5em;
   }
+  .logo_container, .logo_container :hover, .logo_container :visited, .logo_container :active, .logo_container :link
+{
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+  

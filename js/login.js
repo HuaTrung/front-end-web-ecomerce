@@ -75,6 +75,7 @@ if (btnLoginGoogle){
 
 if (btnLoginFacebook){
     btnLoginFacebook.addEventListener("click", ()=>{
+        console.log("inside login")
         auth.signInWithPopup(facebookAuth).then(result=>{
             // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var token = result.credential.accessToken;

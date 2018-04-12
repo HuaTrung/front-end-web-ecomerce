@@ -47,9 +47,8 @@ function getGet() {
         newVal = parseInt(divUpd.text(), 10) - 1;
         if (newVal >= 1) divUpd.text(newVal);
     });
-    var object_cart={}
-    $("#add-cart").on("click",function(){
-        
+    
+    $("#add-cart").on("click",function(){     
         var i  = sessionStorage.getItem(id_product);
       //  console.log(temp.Ten);
         var item = {}
@@ -62,24 +61,17 @@ function getGet() {
                 quality:newVal, 
                 urlImage:temp.HinhAnh  
             }   
-            var jsonStr = JSON.stringify( item );
-            sessionStorage.setItem( id_product, jsonStr );
             alert ("Đã thêm sản phầm này vào giỏ hàng")
         } else {
             var cartValue = sessionStorage.getItem(id_product);
             item = JSON.parse( cartValue );
            // console.log(cartObj)
            item.quality += newVal; 
-
-            var jsonStr = JSON.stringify( item );
-            sessionStorage.setItem( id_product, jsonStr );
-
             alert ("Số lượng sản phẩm này trong giỏ hàng tăng thêm: "+newVal)
         }
-        
-        console.log(sessionStorage.getItem( id_product ))
-       
-
+        var jsonStr = JSON.stringify( item );
+        sessionStorage.setItem( id_product, jsonStr );    
+        console.log(sessionStorage.getItem( id_product ))     
     });
 
 }

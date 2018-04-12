@@ -347,26 +347,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="quantity-select">
 								<div class="entry value-minus">&nbsp;</div>
 								<div class="entry value">
-									<span>1</span>
+									<span id="amount-product">1</span>
 								</div>
 								<div class="entry value-plus active">&nbsp;</div>
 							</div>
 						</div>
-						<!--quantity-->
-						<script>
-							$('.value-plus').on('click', function () {
-								var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) + 1;
-								divUpd.text(newVal);
-							});
-
-							$('.value-minus').on('click', function () {
-								var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
-								if (newVal >= 1) divUpd.text(newVal);
-							});
-						</script>
-						<!--quantity-->
-
-						<a href="#" class="add-to item_add hvr-skew-backward">Add to cart</a>
+						
+						<a href="#" id="add-cart" class=" add-to item_add hvr-skew-backward">Add to cart</a>
 						<div class="clearfix"> </div>
 					</div>
 

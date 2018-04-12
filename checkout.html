@@ -332,15 +332,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<th class="col-md-5">Name</th>
 							<th class="col-md-2">Price</th>
 							<th class="col-md-2">Amount</th>
-							<th class="col-md-3">Total Price</th>
+							<th class="col-md-3">Total Price</th>		
 						</tr>
-						
 					</table>
+					
+				</div>
+				
+			</div>
+			<div class="produced" id="total-money">
+				
+			</div>
+			<hr  style="border-top: 1px solid black;border-width: 3px">
+			<div class="produced">
+				<button data-toggle="modal" data-target="#myModal" class="hvr-skew-backward">Start order</button>
+			</div>
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+				
+					<!-- Modal content-->
+					<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Thông tin chi tiết: </h4>
+					</div>
+					<div class="modal-body">
+							<input type="text" id="cus-name" placeholder="Customer name" required="">
+							<input type="text" id="cus-email" placeholder="Email" required="">
+							<input type="text" id="cus-address" placeholder="Address" required="">
+								
+					</div>
+					<div class="modal-footer">
+						<button type="submit" id="btn-start-order" class="btn btn-default" >Ok</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+					</div>
+					
 				</div>
 			</div>
-			<div class="produced">
-				<a href="single.html" class="hvr-skew-backward">Produced To Buy</a>
-			</div>
+
 		</div>
 	</div>
 
@@ -502,6 +531,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!-- /container -->
 	</footer>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-storage.js"></script>
 	<!-- /FOOTER -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/custom.js"></script>

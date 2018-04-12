@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+	
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 	<link rel="stylesheet" type="text/css" href="styles/navbar.css">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Knewave" rel="stylesheet">
@@ -39,6 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--- start-rate---->
 	<script src="js/jstarbox.js"></script>
 	<link rel="stylesheet" href="css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 	<script type="text/javascript">
 		jQuery(function () {
 			jQuery('.starbox').each(function () {
@@ -690,12 +691,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="pagination">
 							<a class="pagination-newer" href="#">PREV</a>
 							<span class="pagination-inner">
-								<a href="#">1</a>
-								<a class="pagination-active" href="#">2</a>
-								<a href="#">3</a>
-								<a href="#">4</a>
-								<a href="#">5</a>
-								<a href="#">6</a>
+								<a id="so1" href="#">1</a>
+								<a id="so2" class="pagination-active" href="#">2</a>
+								<a id="so3" href="#">3</a>
+								<a id="so4" href="#">4</a>
+								<a id="so5" href="#">5</a>
+								<a id="so6" href="#">6</a>
 							</span>
 							<a class="pagination-older" href="#">NEXT</a>
 						</div>
@@ -1081,9 +1082,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		$('.pagination-inner a').on('click', function () {
 			$(this).siblings().removeClass('pagination-active');
 			$(this).addClass('pagination-active');
-			$('#item01').css("display","none");
-			$('#item02').css("display","none");
-			$('#item03').css("display","none");
+			$('#item01').css("display", "none");
+			$('#item02').css("display", "none");
+			$('#item03').css("display", "none");
+
+		});
+		$('.pagination-newer').on('click', function () {
+			if ($('#so6').hasClass('pagination-active')) {
+				$('#so6').removeClass('pagination-active')
+				$('#so5').addClass('pagination-active');
+			}
+			else {
+				if ($('#so5').hasClass('pagination-active')) {
+					$('#so5').removeClass('pagination-active')
+					$('#so4').addClass('pagination-active');
+				}
+				else {
+					if ($('#so4').hasClass('pagination-active')) {
+						$('#so4').removeClass('pagination-active')
+						$('#so3').addClass('pagination-active');
+					}
+					else {
+						if ($('#so3').hasClass('pagination-active')) {
+							$('#so3').removeClass('pagination-active')
+							$('#so2').addClass('pagination-active');
+						}
+						else {
+							if ($('#so2').hasClass('pagination-active')) {
+								$('#so2').removeClass('pagination-active')
+								$('#so1').addClass('pagination-active');
+							}
+						}
+					}
+				}
+			}
+		})
+		$('.pagination-older').on('click', function () {
+			if ($('#so1').hasClass('pagination-active')) {
+				$('#so1').removeClass('pagination-active')
+				$('#so2').addClass('pagination-active');
+			}
+			else {
+				if ($('#so2').hasClass('pagination-active')) {
+					$('#so2').removeClass('pagination-active')
+					$('#so3').addClass('pagination-active');
+				}
+				else {
+					if ($('#so3').hasClass('pagination-active')) {
+						$('#so3').removeClass('pagination-active')
+						$('#so4').addClass('pagination-active');
+					}
+					else {
+						if ($('#so4').hasClass('pagination-active')) {
+							$('#so4').removeClass('pagination-active')
+							$('#so5').addClass('pagination-active');
+						}
+						else {
+							if ($('#so5').hasClass('pagination-active')) {
+								$('#so5').removeClass('pagination-active')
+								$('#so6').addClass('pagination-active');
+							}
+						}
+					}
+				}
+			}
 		})
 	</script>
 </body>

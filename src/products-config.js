@@ -18,7 +18,7 @@ $(document).ready(function () {
         $(".six-products .img-responsive").each(function (j) {
             //  console.log(j)
             $(this).attr("src", array_6_products[j].urlImage)
-            //  console.log($(this).attr("src"))
+            //$(this).attr("src", "pictures\\Thitngonquocte\\ThitBoNhapKhau\\pc2.jpg")
         });
 
         $(".six-products .pass-data").each(function (j) {
@@ -82,7 +82,7 @@ $(document).ready(function () {
         $(".six-products .img-responsive").each(function (j) {
             console.log(j)
             $(this).attr("src", array_6_products[j + startIndex].urlImage)
-            //  console.log($(this).attr("src"))
+            //$(this).attr("src", "pictures\Thitngonquocte\ThitBoNhapKhau\pc2.jpg")
         });
 
         $(".six-products .pass-data").each(function (j) {
@@ -95,7 +95,7 @@ $(document).ready(function () {
         });
 
         $(".six-products .item_price").each(function (j) {
-            $(this).append(array_6_products[j + startIndex].price + "đ")
+            $(this).html(array_6_products[j + startIndex].price + "đ")
         });
 
         $(".data-pass-2").each(function (j) {

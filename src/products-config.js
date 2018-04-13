@@ -130,7 +130,7 @@ $(document).ready(function () {
         }
         else if ($('#so2').hasClass('pagination-active')) {
             console.log("inside #so2")
-            reloadProduct(6)
+            reloadProduct(3)
         }
     })
     $('.pagination-newer').on('click', function () {
